@@ -83,12 +83,12 @@ export default async function Page({ params }: any) {
             </p>
           </div>
 
-          <div className="bg-stone-100 rounded-2xl p-4">
-            <p className="text-sm text-gray-500">
+          <div className="bg-stone-100 rounded-xl p-3 text-gray-800 font-medium">
+            <p className="text-sm text-gray-700">
               ✅ Lezioni residue
             </p>
 
-            <p className="text-3xl font-bold">
+            <p className="text-3xl font-bold text-gray-900>
               {String(residue)}
             </p>
           </div>
@@ -101,7 +101,7 @@ export default async function Page({ params }: any) {
 
         <div className="mt-8">
 
-          <h2 className="text-xl font-bold mb-4">
+          <h2 className="text-xl font-bold mb-4 text-gray-900>
             Ultime 3 lezioni
           </h2>
 
