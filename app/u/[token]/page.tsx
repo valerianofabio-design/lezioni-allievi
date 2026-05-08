@@ -31,6 +31,7 @@ export default async function Page({ params }: any) {
   const date = [];
 
   for (let row = 3; row < 100; row++) {
+
     const value = sheet.getCellByA1(`E${row}`).value;
 
     if (value) {
@@ -55,6 +56,7 @@ export default async function Page({ params }: any) {
 
   return (
     <main className="min-h-screen bg-stone-100 flex items-center justify-center p-6">
+
       <div className="bg-white rounded-3xl shadow-xl p-8 w-full max-w-md">
 
         <h1 className="text-3xl font-bold mb-6">
@@ -64,33 +66,39 @@ export default async function Page({ params }: any) {
         <div className="space-y-4">
 
           <div className="bg-stone-100 rounded-2xl p-4">
-            <p className="text-sm text-gray-500">
+
+            <p className="text-sm text-gray-700">
               📚 Lezioni acquistate
             </p>
 
-            <p className="text-3xl font-bold">
+            <p className="text-3xl font-bold text-gray-900">
               {String(acquistate)}
             </p>
+
           </div>
 
           <div className="bg-stone-100 rounded-2xl p-4">
-            <p className="text-sm text-gray-500">
+
+            <p className="text-sm text-gray-700">
               🏇 Lezioni svolte
             </p>
 
-            <p className="text-3xl font-bold">
+            <p className="text-3xl font-bold text-gray-900">
               {String(svolte)}
             </p>
+
           </div>
 
-          <div className="bg-stone-100 rounded-xl p-3 text-gray-800 font-medium">
+          <div className="bg-stone-100 rounded-2xl p-4">
+
             <p className="text-sm text-gray-700">
               ✅ Lezioni residue
             </p>
 
-            <p className="text-3xl font-bold text-gray-900>
+            <p className="text-3xl font-bold text-gray-900">
               {String(residue)}
             </p>
+
           </div>
 
         </div>
@@ -101,19 +109,25 @@ export default async function Page({ params }: any) {
 
         <div className="mt-8">
 
-          <h2 className="text-xl font-bold mb-4 text-gray-900>
+          <h2 className="text-xl font-bold mb-4 text-gray-900">
             Ultime 3 lezioni
           </h2>
 
           <div className="space-y-2">
 
             {ultimeTre.map((data, index) => (
+
               <div
                 key={index}
-                className="bg-stone-100 rounded-xl p-3"
+                className="bg-stone-100 rounded-xl p-3 text-gray-900 font-medium"
               >
-                📅 {new Date((Number(data) - 25569) * 86400 * 1000).toLocaleDateString("it-IT")}
+                📅 {
+                  new Date(
+                    (Number(data) - 25569) * 86400 * 1000
+                  ).toLocaleDateString("it-IT")
+                }
               </div>
+
             ))}
 
           </div>
@@ -121,6 +135,7 @@ export default async function Page({ params }: any) {
         </div>
 
       </div>
+
     </main>
   );
 }
