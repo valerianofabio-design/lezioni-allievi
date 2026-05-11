@@ -15,7 +15,7 @@ export default async function Page({ params }: any) {
   if (!sheet) {
     return (
       <main className="min-h-screen flex items-center justify-center">
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-3xl font-bold mb-6 text-gray-900">
           Allievo non trovato
         </h1>
       </main>
@@ -59,7 +59,7 @@ export default async function Page({ params }: any) {
 
       <div className="bg-white rounded-3xl shadow-xl p-8 w-full max-w-md">
 
-        <h1 className="text-3xl font-bold mb-6">
+        <h1 className="text-3xl font-extrabold mb-6 text-black">
           👋 Ciao {nome}
         </h1>
 
