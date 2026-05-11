@@ -39,7 +39,7 @@ export default async function Page({ params }: any) {
     }
   }
 
-  const ultimeTre = date.slice(-3).reverse();
+  const tutteLeDate = date.reverse();
 
   let stato = "🟢 Pacchetto attivo";
   let colore = "bg-green-100 text-green-700";
@@ -110,27 +110,27 @@ export default async function Page({ params }: any) {
         <div className="mt-8">
 
           <h2 className="text-xl font-bold mb-4 text-gray-900">
-            Ultime 3 lezioni
-          </h2>
+  Storico lezioni
+</h2>
 
-          <div className="space-y-2">
+<div className="grid grid-cols-2 gap-2">
 
-            {ultimeTre.map((data, index) => (
+  {tutteLeDate.map((data, index) => (
 
-              <div
-                key={index}
-                className="bg-stone-100 rounded-xl p-3 text-gray-900 font-medium"
-              >
-                📅 {
-                  new Date(
-                    (Number(data) - 25569) * 86400 * 1000
-                  ).toLocaleDateString("it-IT")
-                }
-              </div>
+    <div
+      key={index}
+      className="bg-stone-100 rounded-xl p-2 text-sm text-gray-900 font-medium text-center"
+    >
+      📅 {
+        new Date(
+          (Number(data) - 25569) * 86400 * 1000
+        ).toLocaleDateString("it-IT")
+      }
+    </div>
 
-            ))}
+  ))}
 
-          </div>
+</div>
 
         </div>
 
