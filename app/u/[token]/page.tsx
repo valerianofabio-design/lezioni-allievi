@@ -27,6 +27,7 @@ export default async function Page({ params }: any) {
   const acquistate = sheet.getCellByA1("B2").value;
   const svolte = sheet.getCellByA1("C2").value;
   const residue = sheet.getCellByA1("D2").value;
+  const messaggio = sheet.getCellByA1("A5").value;
 
   const date = [];
 
@@ -62,6 +63,22 @@ export default async function Page({ params }: any) {
         <h1 className="text-3xl font-extrabold mb-6 text-black">
           👋 Ciao {nome}
         </h1>
+
+        {messaggio && (
+
+  <div className="mb-4 text-sm text-gray-600 bg-stone-100 rounded-xl p-3">
+
+    <span className="font-semibold">
+      📢 Comunicazione:
+    </span>{" "}
+
+        <span className="text-blue-600">
+      {String(messaggio)}
+    </span>
+
+  </div>
+
+)}
 
         <div className="space-y-4">
 
