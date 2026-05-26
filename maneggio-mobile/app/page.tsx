@@ -91,7 +91,7 @@ export default function Home() {
 
     <main className="min-h-screen bg-white p-6 flex flex-col gap-6">
 
-      <h1 className="text-3xl font-bold">
+      <<h1 className="text-3xl font-bold text-gray-900">
         Gestionale Maneggio
       </h1>
 
