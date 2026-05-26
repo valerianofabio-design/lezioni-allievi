@@ -91,7 +91,7 @@ export default function Home() {
 
     <main className="min-h-screen bg-white p-6 flex flex-col gap-6">
 
-      <<h1 className="text-3xl font-bold text-gray-900">
+      <h1 className="text-3xl font-bold text-gray-900">
         Gestionale Maneggio
       </h1>
 
@@ -102,7 +102,7 @@ export default function Home() {
         placeholder="Nome nuovo allievo"
         value={nome}
         onChange={(e) => setNome(e.target.value)}
-        className="border rounded-2xl p-4 text-xl"
+        className="border rounded-2xl p-4 text-xl text-gray-900 placeholder:text-gray-900"
       />
 
       <button
@@ -117,7 +117,7 @@ export default function Home() {
       <select
         value={nomeLezione}
         onChange={(e) => setNomeLezione(e.target.value)}
-        className="border rounded-2xl p-4 text-xl"
+        className="border rounded-2xl p-4 text-xl text-gray-900"
       >
 
         <option value="">
